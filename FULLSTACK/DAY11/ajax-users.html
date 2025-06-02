@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX with Multiple Users (XML)</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #users { margin-top: 20px; }
+    .user-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-left: 5px solid #007BFF;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AJAX with XML - Multiple Users</h1>
+  <button onclick="loadUsers()">Load Users (AJAX + XML)</button>
+
+  <div id="users"></div>
+
+  <script>
+    function loadUsers() {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'users.xml', true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const xml = xhr.responseXML;
+          const users = xml.getElementsByTagName('user');
+          let output = '';
+
+          for (let i = 0; i < users.length; i++) {
+            const id = users[i].getElementsByTagName('id')[0].textContent;
+            const name = users[i].getElementsByTagName('name')[0].textContent;
+            const email = users[i].getElementsByTagName('email')[0].textContent;
+
+            output += `
+              <div class="user-card">
+                <strong>ID:</strong> ${id}<br>
+                <strong>Name:</strong> ${name}<br>
+                <strong>Email:</strong> ${email}
+              </div>
+            `;
+          }
+
+          document.getElementById('users').innerHTML = output;
+        } else {
+          document.getElementById('users').innerText = 'Failed to load XML file.';
+        }
+      };
+      xhr.onerror = function () {
+        document.getElementById('users').innerText = 'AJAX request error.';
+      };
+      xhr.send();
+    }
+  </script>
+
+</body>
+</html>

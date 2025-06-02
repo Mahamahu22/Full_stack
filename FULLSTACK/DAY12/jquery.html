@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Methods </title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .box {
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgb(217, 54, 171);
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .highlight {
+      background-color: rgb(33, 210, 195) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery Methods </h1>
+
+  <!-- Buttons -->
+  <button id="showBtn">Show</button>
+  <button id="hideBtn">Hide</button>
+  <button id="fadeInBtn">Fade In</button>
+  <button id="fadeOutBtn">Fade Out</button>
+  <button id="slideDownBtn">Slide Down</button>
+  <button id="slideUpBtn">Slide Up</button>
+  <button id="cssBtn">Change Color</button>
+  <button id="addTextBtn">Add Text</button>
+  <button id="toggleClassBtn">Toggle Class</button>
+  <button id="animateBtn">Animate</button>
+
+  <!-- Box -->
+  <div class="box" id="demoBox">Hello Everybody!!</div>
+
+  <!-- Output -->
+  <div id="output" style="margin-top: 20px;"></div>
+
+  <script>
+    $(document).ready(function () {
+      $('#showBtn').click(function () {
+        $('#demoBox').show();
+      });
+
+      $('#hideBtn').click(function () {
+        $('#demoBox').hide();
+      });
+
+      $('#fadeInBtn').click(function () {
+        $('#demoBox').fadeIn();
+      });
+
+      $('#fadeOutBtn').click(function () {
+        $('#demoBox').fadeOut();
+      });
+
+      $('#slideDownBtn').click(function () {
+        $('#demoBox').slideDown();
+      });
+
+      $('#slideUpBtn').click(function () {
+        $('#demoBox').slideUp();
+      });
+
+      $('#cssBtn').click(function () {
+        $('#demoBox').css('background-color', '#8e44ad');
+      });
+
+      $('#addTextBtn').click(function () {
+        $('#output').text('New text added using jQuery!');
+      });
+
+      $('#toggleClassBtn').click(function () {
+        $('#demoBox').toggleClass('highlight');
+      });
+
+      $('#animateBtn').click(function () {
+        $('#demoBox').animate({
+          width: 'toggle',
+          opacity: 'toggle'
+        }, 800);
+      });
+    });
+  </script>
+
+</body>
+</html>

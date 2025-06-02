@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #2e2525;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+
+    /* Flex Grow, Shrink, Basis */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      background: #f4a0e3;
+      padding: 20px;
+    }
+    .box {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100px;
+      background-color: rgb(233, 45, 157);
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    /* Justify Content */
+    .justify-container {
+      display: flex;
+      background: #09a0be;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    .item {
+      background: #012c39;
+      padding: 10px;
+      color: white;
+      margin: 0 5px;
+    }
+
+    /* Align Items */
+    .align-container {
+      display: flex;
+      height: 100px;
+      background: #e1abfa;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    .align-box {
+      background: #7209b7;
+      color: white;
+      margin: 5px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox</h1>
+
+  <div class="section">
+    <h2>Flex Grow, Shrink, Basis, Gap</h2>
+    <div class="flex-container">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Content</h2>
+
+    <h4>flex-start</h4>
+    <div class="justify-container" style="justify-content: flex-start;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <h4>flex-end</h4>
+    <div class="justify-container" style="justify-content: flex-end;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <h4>center</h4>
+    <div class="justify-container" style="justify-content: center;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <h4>space-between</h4>
+    <div class="justify-container" style="justify-content: space-between;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <h4>space-around</h4>
+    <div class="justify-container" style="justify-content: space-around;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+
+    <h4>space-evenly</h4>
+    <div class="justify-container" style="justify-content: space-evenly;">
+      <div class="item">A</div><div class="item">B</div><div class="item">C</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Align Items</h2>
+
+    <h4>flex-start</h4>
+    <div class="align-container" style="align-items:flex-start">
+      <div class="align-box">Top</div><div class="align-box">Top</div>
+    </div>
+
+    <h4>flex-end</h4>
+    <div class="align-container" style="align-items: flex-end;">
+      <div class="align-box">Bottom</div><div class="align-box">Bottom</div>
+    </div>
+
+    <h4>center</h4>
+    <div class="align-container" style="align-items: center;">
+      <div class="align-box">Middle</div><div class="align-box">Middle</div>
+    </div>
+
+    <h4>stretch</h4>
+    <div class="align-container" style="align-items: stretch;">
+      <div class="align-box" style="height: auto;">Stretch</div>
+      <div class="align-box" style="height: auto;">Stretch</div>
+    </div>
+
+    <h4>baseline</h4>
+    <div class="align-container" style="align-items:baseline;">
+      <div class="align-box" style="font-size: 15px;">Small</div>
+      <div class="align-box" style="font-size: 24px;">Big</div>
+    </div>
+  </div>
+
+</body>
+</html>

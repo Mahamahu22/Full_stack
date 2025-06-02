@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch API - All Styles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #output {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-left: 4px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fetch API Examples</h1>
+
+  <button onclick="fetchWithCallback()">Fetch User (Callback)</button>
+  <button onclick="fetchWithPromise()">Fetch User (Promise)</button>
+  <button onclick="fetchWithAsyncAwait()">Fetch User (Async/Await)</button>
+
+  <div id="output">Result will appear here...</div>
+
+  <script>
+    const API_URL = 'https://jsonplaceholder.typicode.com/users/1';
+    const output = document.getElementById('output');
+
+    // 1. Callback style (using XMLHttpRequest)
+    function fetchWithCallback() {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', API_URL);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          output.innerText = 'Callback Result:\n' + xhr.responseText;
+        } else {
+          output.innerText = 'Callback Error: ' + xhr.status;
+        }
+      };
+      xhr.onerror = function () {
+        output.innerText = 'Callback Error: Network error';
+      };
+      xhr.send();
+    }
+
+    // 2. Promise style
+    function fetchWithPromise() {
+      fetch(API_URL)
+        .then(response => {
+          if (!response.ok) throw new Error('HTTP error ' + response.status);
+          return response.json();
+        })
+        .then(data => {
+          output.innerText = 'Promise Result:\n' + JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          output.innerText = 'Promise Error: ' + error.message;
+        });
+    }
+
+    // 3. Async/Await style
+    async function fetchWithAsyncAwait() {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw new Error('HTTP error ' + response.status);
+        const data = await response.json();
+        output.innerText = 'Async/Await Result:\n' + JSON.stringify(data, null, 2);
+      } catch (error) {
+        output.innerText = 'Async/Await Error: ' + error.message;
+      }
+    }
+  </script>
+
+</body>
+</html>

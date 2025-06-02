@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Weather</title>
+</head>
+<body>
+  <h1>Weather</h1>
+  <input id="cityInput" placeholder="Enter city" />
+  <button onclick="getWeather()">Get Weather</button>
+  <div id="result"></div>
+
+  <script>
+    function getWeather() {
+      const city = document.getElementById('cityInput').value;
+      fetch('https://geocoding-api.open-meteo.com/v1/search?name=' + city)
+        .then(res => res.json())
+        .then(data => fetch('https://api.open-meteo.com/v1/forecast?latitude=${data.results[0].latitude}&longitude=${data.results[0].longitude}&current_weather=true'))
+        .then(res => res.json())
+        .then(weatherData => {
+          const w = weatherData.current_weather;
+          document.getElementById('result').innerHTML = 'Temperature: ${w.temperature} °C<br>Wind Speed: ${w.windspeed} km/h';
+        });
+    }
+  </script>
+</body>
+</html>

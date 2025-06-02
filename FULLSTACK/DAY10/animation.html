@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Media Query, Transform, and Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color:white;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: palevioletred;
+      transform: rotate(0deg);
+      animation: spin 4s linear infinite;
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.2) rotate(45deg);
+      background-color: blueviolet;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Media Query for smaller screens */
+    @media (max-width: 600px) {
+      .box {
+        width: 70px;
+        height: 70px;
+        background-color: lightseagreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

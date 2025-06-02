@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+</head>
+<body>
+  
+  <div class="form-box">
+
+
+  <h1>Sample Form</h1>
+  <form>
+    <label>Name (required):</label>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+
+    <label>Age (number):</label>
+    <input type="number" name="age"><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female<br><br>
+
+    <label>Subscribe:</label>
+    <input type="checkbox" name="subscribe"> Yes<br><br>
+
+    <label>Note (readonly):</label>
+    <input type="text" value="Read-only info" readonly><br><br>
+
+    <label>Comments:</label><br>
+    <textarea rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+  </body>
+  </html>
+</div>
+
+
+</body>
+</html>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #83b2ea;
+      padding: 30px;
+    }
+
+    .form-box {
+      background: #eeeaea;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    label {
+    
+      margin: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    
+  </style>

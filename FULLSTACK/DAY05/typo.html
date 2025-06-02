@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typography</title>
+
+  <!-- Google Font using <link> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Google Font using @import */
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+    /* Fixed font using @font-face */
+    @font-face {
+      font-family: 'FixedFont';
+      src: url('https://fonts.gstatic.com/s/pressstart2p/v12/e3t4euO8T-267oIAQAu6jDQyK0nS.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Variable font using @font-face */
+    @font-face {
+      font-family: 'VariableFont';
+      src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxM.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+
+    body {
+      margin: 5rem;
+      line-height: 2.6;
+    }
+
+    .link-font {
+      font-family:'Roboto', sans-serif;
+      color: #6d8904;
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    .import-font {
+      font-family: 'Lobster', cursive;
+      color: #af0fe9;
+      font-size: 30px;
+    }
+
+    .fixed-font {
+      font-family: 'FixedFont', monospace;
+      color: #e80d0d;
+      font-size: 30px;
+    }
+
+    .variable-font {
+      font-family: 'VariableFont', sans-serif;
+      color: #cb0ba4;
+      font-weight: 400;
+      font-size: 30px;
+    }
+
+    .variable-font-bold {
+      font-family: 'VariableFont', sans-serif;
+      color: #09afe1;
+      font-weight: 900;
+      font-size: 30px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="link-font">Happy life</h2>
+  <p class="import-font">Hard work gives Perfection</p>
+  <p class="fixed-font">Even it hurts,don't stop trying</p>
+  <p class="variable-font">Miracles can happen</p>
+  <p class="variable-font-bold">Trust the God</p>
+
+</body>
+</html>

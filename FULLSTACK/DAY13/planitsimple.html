@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">Daily Planner</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-5">Plan Your Day Effortlessly</h1>
+      <p class="lead">A simple tool to track your daily tasks</p>
+    </div>
+  </header>
+
+  <!-- Task Form -->
+  <section class="py-4">
+    <div class="container">
+      <h3 class="mb-3">Add a Task</h3>
+      <form>
+        <div class="mb-3">
+          <label for="taskName" class="form-label">Task Name</label>
+          <input type="text" class="form-control" id="taskName" placeholder="e.g. Study HTML">
+        </div>
+        <div class="mb-3">
+          <label for="taskTime" class="form-label">Time</label>
+          <input type="time" class="form-control" id="taskTime">
+        </div>
+        <div class="mb-3">
+          <label for="taskPriority" class="form-label">Priority</label>
+          <select class="form-select" id="taskPriority">
+            <option selected>Choose...</option>
+            <option value="1">High</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success">Add Task</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-success text-white text-center py-3 mt-4">
+    <p class="mb-0">© 2025 Daily Planner. Made with Bootstrap.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

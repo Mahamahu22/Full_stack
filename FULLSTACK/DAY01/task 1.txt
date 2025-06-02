@@ -1,0 +1,36 @@
+1. What is a Description List?
+A description list is used to show a word and its meaning (like in a dictionary).
+It uses three tags:
+
+<dl> – description list start
+<dt> – the word
+<dd> – the meaning
+
+
+Example:
+<dl>
+  <dt>Apple</dt>
+  <dd>A red or green fruit.</dd>
+</dl>
+
+
+
+2. Another Semantic Tag  for delete tag.
+The <s> tag is similar to <del>.
+It is used to show something is no longer correct, but still visible with a line through it.
+It means “not valid anymore”.
+
+Example:
+
+<p><s>Rs. 500</s> Rs. 400</p>
+
+
+
+3. What is a Semantic Tag and Purpose.
+Semantic tags are HTML tags that clearly tell the meaning of the content.
+They make the code easier to read and understand for both people and browsers.
+
+Example:
+<header> – used to write the top part of a webpage (like the title or logo).
+Purpose: It shows “this is the heading section” of the page.
+
