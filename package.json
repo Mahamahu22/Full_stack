@@ -1,0 +1,24 @@
+{
+  "name": "full_stack-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahamahu22/Full_stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahamahu22/Full_stack/issues"
+  },
+  "homepage": "https://github.com/Mahamahu22/Full_stack#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "chalk": "^5.4.1"
+  }
+}
