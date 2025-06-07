@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node FULLSTACK/DAY18/axios-task/Postdata.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   "homepage": "https://github.com/Mahamahu22/Full_stack#readme",
   "dependencies": {
     "axios": "^1.9.0",
-    "chalk": "^5.4.1"
+    "chalk": "^4.1.2"
   }
 }
