@@ -1,0 +1,56 @@
+✅ Data fetched successfully!
+
+Post #1  
+Title: How to Learn JavaScript  
+Body: Start with basics and move toward advanced...  
+---------------------------------------------------
+
+Post #2  
+Title: Mastering Async/Await in Node.js  
+Body: Async/await makes promises easier to manage...  
+---------------------------------------------------
+
+Post #3  
+Title: Understanding REST APIs  
+Body: REST APIs allow client-server communication...  
+---------------------------------------------------
+
+Post #4  
+Title: What is JSON?  
+Body: JSON stands for JavaScript Object Notation...  
+---------------------------------------------------
+
+Post #5  
+Title: Introduction to Axios  
+Body: Axios is a promise-based HTTP client...  
+---------------------------------------------------
+
+
+✅ Users fetched successfully!
+
+User #1  
+Name: John Doe  
+Email: john@example.com  
+City: New York  
+---------------------------------------------------
+
+User #2  
+Name: Jane Smith  
+Email: jane@example.com  
+City: Los Angeles  
+---------------------------------------------------
+
+User #3  
+Name: Bob Johnson  
+Email: bob@example.com  
+City: Chicago  
+---------------------------------------------------
+
+
+✅ Data posted successfully!
+
+ID: 101  
+Title: Hello Axios  
+Body: Learning how to use Axios for POST  
+UserID: 1  
+---------------------------------------------------
