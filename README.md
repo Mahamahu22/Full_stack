@@ -60,10 +60,10 @@ Welcome to my Full Stack development practice repository. Each folder contains d
 
 ### ⚛️ React-based Apps
 
-- [DAY 19 – React Resume](https://github.com/Mahamahu22/day19-app)  
+- [DAY 19 – React ToDo app](https://github.com/Mahamahu22/day19-app)  
   → Built resume using React components.
 
-- [DAY 20 – Todo App](https://github.com/Mahamahu22/day20-todo)  
+- [DAY 20 – Adding Functionalities Todo App](https://github.com/Mahamahu22/day20-todo)  
   → Todo list using `useState` and props.
 
 - [DAY 21 – Context + Router](https://github.com/Mahamahu22/day21-app)  
@@ -72,7 +72,7 @@ Welcome to my Full Stack development practice repository. Each folder contains d
 - [DAY 22 – Memoization + Routing](https://github.com/Mahamahu22/day22-app)  
   → Implemented `useMemo`, lazy loading, and nested routes.
 
-- [DAY 23 – React Forms](https://github.com/Mahamahu22/day23-form)  
+- [DAY 23 – React Forms using Formik](https://github.com/Mahamahu22/day23-form)  
   → Handled input with validation using React.
 
 - [DAY 24 – Storage API](https://github.com/Mahamahu22/day24-storage)  
