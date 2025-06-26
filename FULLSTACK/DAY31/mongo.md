@@ -4,9 +4,9 @@ config  12.00 KiB
 local   40.00 KiB
 
 test> use studentDB
-switched to db studentDB
+switched to db students
 
-test> db.students.insertMany([
+studentDB> db.students.insertMany([
   { name: "Mahalakshmi", age: 21, subject: "Maths", marks: 88 },
   { name: "Anjali", age: 22, subject: "Physics", marks: 92 },
   { name: "Kavya", age: 20, subject: "Biology", marks: 85 },
@@ -22,7 +22,7 @@ test> db.students.insertMany([
   }
 }
 
-test> db.students.find()
+studentDB> db.students.find()
 [
   {
     _id: ObjectId('685d2faeceb82b983f748a63'),
@@ -54,7 +54,7 @@ test> db.students.find()
   }
 ]
 
-test> db.students.updateOne(
+studentDB> db.students.updateOne(
   { name: "Kavya" },
   { $set: { marks: 91 } }
 )
@@ -64,13 +64,13 @@ test> db.students.updateOne(
   modifiedCount: 1
 }
 
-test> db.students.deleteOne({ name: "Divya" })
+studentDB> db.students.deleteOne({ name: "Divya" })
 {
   acknowledged: true,
   deletedCount: 1
 }
 
-test> db.students.find()
+studentDB> db.students.find()
 [
   {
     _id: ObjectId('685d2faeceb82b983f748a63'),
