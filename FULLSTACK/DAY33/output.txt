@@ -1,0 +1,41 @@
+✅ MongoDB Connected
+📌 Created: {
+  studentName: 'Mahalakshmi',
+  level: 'Intermediate',
+  score: 89,
+  batch: 'Batch-7A',
+  isCertified: false,
+  _id: new ObjectId('6860d7c5dc72fc97f668da98'),
+  __v: 0
+}
+📚 Learner List: [
+  {
+    _id: new ObjectId('6860d7c5dc72fc97f668da98'),
+    studentName: 'Mahalakshmi',
+    level: 'Intermediate',
+    score: 89,
+    batch: 'Batch-7A',
+    isCertified: false,
+    __v: 0
+  }
+]
+✏️ Updated: {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+📚 Learner List: [
+  {
+    _id: new ObjectId('6860d7c5dc72fc97f668da98'),
+    studentName: 'Mahalakshmi',
+    level: 'Intermediate',
+    score: 93,
+    batch: 'Batch-7A',
+    isCertified: true,
+    __v: 0
+  }
+]
+🗑️ Deleted: { acknowledged:  true, deletedCount: 1 }
+📚 Learner List: []
