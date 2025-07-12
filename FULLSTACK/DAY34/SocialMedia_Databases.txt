@@ -1,0 +1,41 @@
+📌 Databases Used by Popular Websites
+
+Facebook:    MySQL, RocksDB, TAO  
+✅ Fast social graph queries, write-heavy optimization  
+❌ Needs internal sharding and replication strategies
+
+Instagram:   PostgreSQL, Cassandra, Redis  
+✅ Strong relational consistency + distributed data handling  
+❌ High latency risk if not tuned well
+
+Twitter:     Manhattan (custom), MySQL, Redis  
+✅ Massive-scale messaging, in-memory caching  
+❌ Legacy components are hard to refactor
+
+Netflix:     Cassandra, Dynomite, Amazon RDS  
+✅ Resilient microservices, global replication  
+❌ Requires expert tuning, vendor lock-in
+
+LinkedIn:    Espresso (custom), Kafka, MySQL  
+✅ Realtime feed delivery, large event stream support  
+❌ Requires dedicated infrastructure and tooling
+
+YouTube:     Spanner, BigQuery, Vitess  
+✅ Real-time analytics, global video consistency  
+❌ Expensive to scale, limited open access
+
+Flipkart:    MySQL, Redis, Aerospike  
+✅ Handles order processing + inventory caching  
+❌ High concurrency requires queueing system
+
+Snapchat:    Cassandra, Memcached, Redis  
+✅ Supports ephemeral data, high concurrency  
+❌ Scaling chat systems is complex
+
+Spotify:     Google Bigtable, PostgreSQL, Cassandra  
+✅ Tracks live playbacks and preferences  
+❌ Audio metadata indexing is resource-intensive
+
+Pinterest:   HBase, Elasticsearch, MySQL  
+✅ Great for visual search and pin ranking  
+❌ Image indexing consumes huge storage

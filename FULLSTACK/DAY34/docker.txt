@@ -1,0 +1,78 @@
+ Explore and Learn About Docker, Dockerfile & Docker Compose
+
+1. What is Docker?
+Docker is a tool that packages your application and everything it needs to run (code, libraries, dependencies) into a single unit called a container.
+
+Think of a Docker container like a mini-computer that runs your app the same way everywhere: on your laptop, on someone else’s PC, or on a server.
+
+ Why Use Docker?
+- No more “it works on my machine” issues!
+- Easy deployment
+- Isolated environments
+- Speeds up project setup
+
+2. What is a Dockerfile?
+A Dockerfile is a list of instructions used to create a Docker image.
+
+ Example: Node.js App
+
+Project Structure:
+my-app/
+├── app.js
+├── package.json
+└── Dockerfile
+
+app.js
+--------
+const http = require('http');
+const server = http.createServer((req, res) => {
+  res.end('Hello from Docker!');
+});
+server.listen(3000);
+
+package.json
+-------------
+{
+  "name": "docker-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {}
+}
+
+Dockerfile
+-----------
+FROM node:18
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "app.js"]
+
+🔨 Build & Run the container:
+docker build -t my-node-app .
+docker run -p 3000:3000 my-node-app
+
+Visit http://localhost:3000 → Hello from Docker!
+
+3. What is Docker Compose?
+Docker Compose allows you to run multiple containers at once using a single file (docker-compose.yml).
+
+ Example: Node.js App + MongoDB
+
+docker-compose.yml
+-------------------
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+Run everything:
+docker-compose up
+
