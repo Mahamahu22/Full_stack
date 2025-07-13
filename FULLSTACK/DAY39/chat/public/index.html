@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Group Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #msg {
+      padding: 8px;
+      width: 250px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #chat {
+      margin-top: 20px;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #chat li {
+      background-color: #fff;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat Room</h1>
+  <input id="msg" placeholder="Type a message" />
+  <button onclick="send()">Send</button>
+  <ul id="chat"></ul>
+
+  <script src="client.js"></script>
+</body>
+</html>

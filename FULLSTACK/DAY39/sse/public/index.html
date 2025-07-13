@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE Live Time</title>
+</head>
+<body>
+  <h2>Server-Sent Event - Time Update</h2>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById('output');
+    const source = new EventSource('/events');
+
+    source.onmessage = function(event) {
+      output.textContent = event.data;
+    };
+  </script>
+</body>
+</html>

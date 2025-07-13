@@ -1,0 +1,63 @@
+ Real-time Communication & AWS Setup
+
+
+────────────────────────────────────────────
+🔹 PART 1: SSE (Server-Sent Events)
+
+📂 Folder: sse/
+
+✅ What I Did:
+- Built a server using Node.js and Express
+- Sent current time to the browser every second using SSE
+- Used EventSource API on the frontend
+
+▶️ How to Run:
+1. Open terminal in task39-sse
+2. Run:
+   npm install
+   node server.js
+3. Open browser at:
+   http://localhost:3001
+
+📌 My Output:
+- Heading: “Server-Sent Event - Time Update”
+- Below it, current time updates every second in real-time
+
+────────────────────────────────────────────
+🔹 PART 2: WebSocket Group Chat App
+
+📂 Folder: chat/
+
+✅ What I Did:
+- Created a WebSocket server using ws package
+- Enabled group chat between connected clients
+- Frontend built with HTML + JS
+
+▶️ How to Run:
+1. Open terminal in task39-chat
+2. Run:
+   npm install
+   node server.js
+3. Open browser at:
+   http://localhost:3003
+
+ My Output:
+- Shows “Chat Room” heading
+- Message input and “Send” button
+- Sent message appears below
+
+────────────────────────────────────────────
+🔹 PART 3: AWS Account Setup
+
+✅ What I Did:
+- Visited https://aws.amazon.com/
+- Clicked “Create Free Account”
+- Entered:
+  - Email + password
+  - Name & address
+  - Debit/credit card (₹2 or ₹5 hold)
+  - Verified mobile number with OTP
+- Logged in to: https://console.aws.amazon.com/
+
+📌 My Output:
+- Successfully logged into AWS Console
