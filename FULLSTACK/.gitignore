@@ -1,0 +1,10 @@
+# Ignore private keys
+*.pem
+*.key
+
+
+
+# Ignore build folders
+node_modules/
+dist/
+build/
