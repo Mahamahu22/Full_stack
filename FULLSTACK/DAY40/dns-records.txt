@@ -1,0 +1,25 @@
+ DNS RECORD TYPES – EXPLAINED
+
+1️⃣ A Record (Address Record)
+- Maps a domain name to an IPv4 address.
+- Example: mysite.com → 192.0.2.1
+
+2️⃣ AAAA Record (IPv6 Address Record)
+- Maps a domain to an IPv6 address.
+- Example: mysite.com → 2001:0db8:85a3::8a2e:0370:7334
+
+3️⃣ CNAME Record (Canonical Name Record)
+- Alias of one domain to another.
+- Example: www.mysite.com → mysite.com
+
+4️⃣ MX Record (Mail Exchange)
+- Specifies mail servers for email handling of a domain.
+- Example: mysite.com → mail handled by mail.mysite.com
+
+5️⃣ TXT Record (Text Record)
+- Holds text data like domain ownership (used in Google Verification, SPF, etc.)
+- Example: v=spf1 include:_spf.google.com ~all
+
+6️⃣ NS Record (Name Server Record)
+- Points to the name servers that handle DNS for the domain.
+- Example: mysite.com → ns1.awsdns.com, ns2.awsdns.net

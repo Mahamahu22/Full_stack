@@ -1,0 +1,65 @@
+ Part 1: Host Static Website Using AWS S3
+
+
+## ✅ What I Did
+
+- Logged into AWS Console
+- Opened **S3** service
+- Created a new bucket named `maha-s3-site`
+- Unchecked “Block all public access”
+- Uploaded `index.html` file
+- Made the file public
+- Enabled **Static website hosting** in the bucket properties
+- Copied the website endpoint URL and opened it in the browser
+
+## 📸 Output Screenshot
+
+> ✅ My output of S3 hosted website is shown below:
+
+![S3 Website Output](D:\FSD\Full_stack-1\FULLSTACK\DAY40\S3 website.jpeg)
+
+website url:
+
+http://maha-s3-website.s3-website.eu-north-1.amazonaws.com/
+
+
+
+---
+
+## ✅ PART 2: Hosting Website using EC2 + NGINX
+
+### 📝 What I Did:
+
+1. **Launched EC2 Instance**  
+   - Chose Amazon Linux 2023  
+   - Downloaded key file: `mykey.pem`  
+   - Allowed HTTP in security group
+
+2. **Connected to EC2 using Git Bash**
+```bash
+ssh -i "mykey.pem" ec2-user@56.228.14.66
+
+3. Done essential details in bash
+
+4.Implemented NGINX
+
+5. Output screenshot: 
+
+(FULLSTACK/DAY40/EC2 web.jpeg)
+
+(D:\FSD\Full_stack-1\FULLSTACK\DAY40\nginx.jpeg)
+
+6.Checked Website in Browser
+🔗 http://56.228.14.66
+
+
+## ✅ PART 3: What I Learned – DNS
+
+- DNS connects domain names to IP addresses.
+- It's like a phonebook for websites.
+- A Record maps to IPv4, CNAME points one domain to another.
+- MX is for emails, TXT is for domain verification.
+- Now I know how domains reach the correct server.
+
+
+
