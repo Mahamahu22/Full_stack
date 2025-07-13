@@ -1,0 +1,70 @@
+Communication Protocols:
+
+
+---------------------------------------------------------
+1. WebSocket
+---------------------------------------------------------
+- A full-duplex (two-way) communication protocol.
+- Keeps the connection open between client and server.
+- Useful for real-time applications like chat apps, multiplayer games, stock tickers.
+
+Example (Client-side JavaScript):
+---------------------------------------------------------
+const socket = new WebSocket("ws://localhost:3000");
+socket.onmessage = (event) => {
+  console.log("Received:", event.data);
+};
+
+
+Example (Node.js server using ws library):
+---------------------------------------------------------
+const WebSocket = require("ws");
+const server = new WebSocket.Server({ port: 3000 });
+server.on("connection", (socket) => {
+  socket.send("Welcome!");
+});
+
+
+---------------------------------------------------------
+2. Server-Sent Events (SSE)
+---------------------------------------------------------
+- One-way communication: Server to Client only.
+- Uses EventStream over HTTP.
+- Good for live feeds: notifications, sports updates, etc.
+
+Example (Server-side with Express):
+---------------------------------------------------------
+app.get("/events", (req, res) => {
+  res.setHeader("Content-Type", "text/event-stream");
+  res.write("data: Hello from server\\n\\n");
+});
+
+
+Example (Client-side JavaScript):
+---------------------------------------------------------
+const eventSource = new EventSource("/events");
+eventSource.onmessage = (e) => {
+  console.log("Server says:", e.data);
+};
+
+
+
+---------------------------------------------------------
+3. Webhooks
+---------------------------------------------------------
+- One-way: A server notifies another server.
+- Commonly used for event callbacks: payments, GitHub pushes, etc.
+
+Example (Receiving webhook in Express):
+---------------------------------------------------------
+app.post("/webhook", (req, res) => {
+  console.log("Webhook received:", req.body);
+  res.status(200).send("OK");
+});
+
+
+Use Case:
+  - GitHub sends a webhook to your server when someone pushes code.
+  - Payment gateway like Razorpay sends a webhook to your server when payment is complete.
+
+---------------------------------------------------------
